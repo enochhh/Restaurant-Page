@@ -9,15 +9,70 @@ function createMain() {
     return main; 
 }
 
+function createHeader() {
+    const header = document.createElement('header');
+    header.classList.add('header');
+    const restaurantName = document.createElement('h1');
+    restaurantName.classList.add('restaurant-name');
+    restaurantName.textContent = 'Restaurant';
+
+    header.appendChild(restaurantName);
+    header.appendChild(createNav());
+    return header;
+}
+
+function createNav() {
+    const nav = document.createElement('nav');
+
+    const homeBtn = document.createElement('button');
+    homeBtn.classList.add('nav-btn');
+    homeBtn.textContent = "Home";
+    homeBtn.addEventListener('click', (e) => {
+        if(e.target.classList.contains('active')) return;
+        setActiveBtn(homeBtn);
+        loadHome();
+    });
+
+    const menuBtn = document.createElement('button');
+    menuBtn.classList.add('nav-btn');
+    menuBtn.textContent = "Menu";
+    menuBtn.addEventListener('click', (e) => {
+        if(e.target.classList.contains('active')) return;
+        setActiveBtn(menuBtn);
+        loadMenu();
+    });
+
+    const contactBtn = document.createElement('button');
+    contactBtn.classList.add('nav-btn');
+    contactBtn.textContent = "Contact";
+    contactBtn.addEventListener('click', (e) => {
+        if(e.target.classList.contains('active')) return;
+        setActiveBtn(contactBtn);
+        loadContact();
+    })
+
+    nav.appendChild(homeBtn);
+    nav.appendChild(menuBtn);
+    nav.appendChild(contactBtn);
+    return nav;
+}
+
+function setActiveBtn(btn) {
+    const btns = document.querySelectorAll('.nav-btn');
+    btns.forEach((btn) => {
+        if(btn !== this) {
+            btn.classList.remove('active');
+        }
+    });
+    btn.classList.add('active');
+}
+
 function loadWebsite() {
     const content = document.getElementById('content');
-    const text = document.createElement('p');
-    text.textContent = "Hello";
-    content.appendChild(text);
+    content.appendChild(createHeader());
     content.appendChild(createMain());
     // content.appendChild(loadMenu());
     // content.appendChild(loadHome());
-    content.appendChild(loadContact());
 }
 
 export default loadWebsite;
