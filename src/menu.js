@@ -31,6 +31,7 @@ function createMenuEntry(name, description, price) {
     menuEntry.appendChild(title);
     menuEntry.appendChild(describe);
     menuEntry.appendChild(cost); 
+    //menuEntry.appendChild(foodPic);
 
     return menuEntry;
 }
