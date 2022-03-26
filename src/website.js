@@ -1,5 +1,6 @@
 import loadMenu from "./menu";
 import loadHome from "./home";
+import loadContact from "./contact";
 
 function createMain() {
     const main = document.createElement('main');
@@ -15,7 +16,8 @@ function loadWebsite() {
     content.appendChild(text);
     content.appendChild(createMain());
     // content.appendChild(loadMenu());
-    content.appendChild(loadHome());
+    // content.appendChild(loadHome());
+    content.appendChild(loadContact());
 }
 
 export default loadWebsite;
