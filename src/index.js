@@ -1,1 +1,3 @@
-console.log("Hello!");
+import loadWebsite from "./website";
+
+loadWebsite();
