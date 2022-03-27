@@ -21,6 +21,15 @@ function createHeader() {
     return header;
 }
 
+function createFooter() {
+    const footer = document.createElement('footer');
+    footer.classList.add('footer');
+    const copyright = document.createElement('p');
+    copyright.textContent = "Copyright © enochhh";
+    footer.appendChild(copyright);
+    return footer;
+}
+
 function createNav() {
     const nav = document.createElement('nav');
 
@@ -71,8 +80,10 @@ function loadWebsite() {
     const content = document.getElementById('content');
     content.appendChild(createHeader());
     content.appendChild(createMain());
-    // content.appendChild(loadMenu());
-    // content.appendChild(loadHome());
+    content.appendChild(createFooter());
+
+    setActiveBtn(document.querySelector('.nav-btn'));
+    loadHome();
 }
 
 export default loadWebsite;
