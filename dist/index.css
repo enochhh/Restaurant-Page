@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(96, 201, 166);
+}
+
+.header {
+    background-color: rgb(243, 118, 118);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 3rem;
+    height: 20vh;
+}
+
+.footer {
+    background-color: rgb(240, 240, 146);
+    height: 5vh;
+}
+
+.main {
+    height:80vh;
+    background-color: rgb(91, 182, 91);
+}
