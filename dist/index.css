@@ -21,16 +21,30 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 3rem;
-    height: 20vh;
+    padding: 2rem;
+    height: 20rem;
+    font-size: 3.4rem;
+}
+
+.nav-bar {
+    padding-top: 3rem;
+    display: flex;
+    gap: 8rem;
+}
+
+.nav-btn {
+    font-size: 2.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .footer {
     background-color: rgb(240, 240, 146);
-    height: 5vh;
+    min-height: 3rem;
 }
 
 .main {
-    height:80vh;
+    height:80rem;
     background-color: rgb(91, 182, 91);
 }
