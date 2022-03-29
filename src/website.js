@@ -32,6 +32,7 @@ function createFooter() {
 
 function createNav() {
     const nav = document.createElement('nav');
+    nav.classList.add('nav-bar');
 
     const homeBtn = document.createElement('button');
     homeBtn.classList.add('nav-btn');
