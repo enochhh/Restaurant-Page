@@ -1,16 +1,21 @@
 function createHome() {
     const home = document.createElement('div');
     home.classList.add('home');
-    home.appendChild(createText('Some placeholder text 1'));
-    home.appendChild(createText('Some placeholder text 2'));
-    home.appendChild(createText('Some placeholder text 3'));
 
+    // const homeImg = document.createElement('img');
+    // homeImg.src = 'images/patio.webp';
+    
+    // home.appendChild(createText('Some placeholder text 1'));
+    // home.appendChild(createText('Some placeholder text 2'));
+    // home.appendChild(createText('Some placeholder text 3'));
+    home.appendChild(homeImg);
     return home;
 }
 
+
 function createText(txt) {
     const text = document.createElement('p');
-    text.innerText = txt;
+    text.textContent = txt;
     return text;
 }
 
